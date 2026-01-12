@@ -10,9 +10,6 @@ build/
 .venv/
 venv/
 
-# Jupyter
-.ipynb_checkpoints/
-
 # Tooling
 .pytest_cache/
 .mypy_cache/
@@ -26,5 +23,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Data (必要ならコメントアウト外して使う)
-# data/
+# Claude Code
+.claude/
