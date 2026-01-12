@@ -1,11 +1,17 @@
 [project]
-name = "cli-entry"
+name = "mytool"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.12"
+description = "学習用CLIツール - 入口を統一する仕組みを理解する"
+requires-python = ">=3.11"
 dependencies = [
-    "black>=25.12.0",
-    "pytest>=9.0.2",
-    "ruff>=0.14.11",
+    "typer>=0.9.0",
 ]
+
+# ★ここが「入口統一」の仕組み：エントリポイント定義
+# インストール後、`mytool` コマンドで mytool.cli:main を起動できる
+[project.scripts]
+mytool = "mytool.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
